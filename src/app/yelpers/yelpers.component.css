@@ -1,0 +1,92 @@
+
+
+.jumbotron{
+
+}
+
+.hero {
+    /* Sizing */
+    width: 100%;
+    height: 100vh;
+    
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Text styles */
+    text-align: center;
+    color: #ffffff; /* ADD THIS LINE */
+    text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+    
+    /* Background styles */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/../assets/O4hkbVt.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.button{
+    padding: 2em;
+    margin: 5em;
+    background-size: 20em;
+    border-radius: 10px;
+    background: #603813; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #603813, #b29f94); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #603813, #b29f94); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.hero h1 {
+    /* Text styles */
+    font-size: 5em;
+    
+    /* Margins */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.hero .btn {
+    /* Positioning and sizing */
+    display: block;
+    width: 400px;
+    
+    /* Padding and margins */
+    padding: 1em;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Text styles */
+    color: white; /* CHANGE THIS LINE */
+    text-decoration: none;
+    font-size: 1.5em;
+    
+    /* Border styles */
+    border: 3px solid white; /* CHANGE THIS LINE */
+    border-radius: 20px;
+
+    
+}
+
+.input{
+    border-radius: 10px;
+    width: 90%;
+}
+
+
+
+
+
+
+.wrapper{
+    background-image: linear-gradient(rgba(199, 170, 170, 0.5),rgba(99, 68, 68, 0.5));
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}

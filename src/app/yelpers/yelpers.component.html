@@ -1,0 +1,95 @@
+<body>
+    <section class="hero">
+        <div class="hero-inner">
+            <h1>Welcome to the food search engine</h1>
+            <a routerLink='auth' class='btn'>Enter food dreams below</a>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+              <select formControlName="categories">
+                <option>placeholder</option>
+                <option value="1">1-moneys</option>
+                <option value="2">2-moneys</option>
+                <option value="3">3-moneys</option>
+                <option value="4">4-moneys</option>
+                <option *ngFor="let cat of categories" [value]="cat.category"></option>
+              </select>
+              <label>
+                <span class="input">
+                  <input
+                  type="text"
+                  formControlName="input"
+                  placeholder="Enter a location"
+                  />
+                  <span></span>
+                </span>
+              </label>
+          <input type="submit" value="Search" class="button" />
+        </form>
+        </div>
+    </section>
+ 
+</body>
+
+<div class="wrapper">
+  <div *ngIf="item">
+    <div class="widget">
+      <div class="description">
+        <img src="{{item.image_url}}" height="500px" width="500px" />
+        <h2>
+          <a href="{{item.url}}">{{ item.name }}</a>
+        </h2>
+        <div *ngIf="item.rating === 0">
+          <img src="../../assets/large_0.png" />
+        </div>
+        <div *ngIf="item.rating === 1">
+          <img src="../../assets/large_1_half.png" />
+        </div>
+        <div *ngIf="item.rating === 1.5">
+          <img src="../../assets/large_1_half.png" />
+        </div>
+        <div *ngIf="item.rating === 2">
+          <img src="../../assets/large_2.png" />
+        </div>
+        <div *ngIf="item.rating === 2.5">
+          <img src="../../assets/large_2_half.png" />
+        </div>
+        <div *ngIf="item.rating === 3">
+          <img src="../../assets/large_3.png" />
+        </div>
+        <div *ngIf="item.rating === 3.5">
+          <img src="../../assets/large_3_half.png" />
+        </div>
+        <div *ngIf="item.rating === 4">
+          <img src="../../assets/large_4.png" />
+        </div>
+        <div *ngIf="item.rating === 4.5">
+          <img src="../../assets/large_4_half.png" />
+        </div>
+        <div *ngIf="item.rating === 5">
+          <img src="../../assets/large_5.png" />
+        </div>
+        <div class="address">
+          <h4>-Address-</h4>
+          <p *ngFor="let location of item.location.display_address">{{ location }}</p>
+        </div>
+        <div class="phone">
+          <h4>-Phone Number-</h4>
+          <p>{{ item.display_phone }}</p>
+        <div class="transactions">
+          <h4>Delivery or Pickup Available?</h4>
+          <p>{{ item.transactions_display }}</p>
+        </div>
+        <div>
+          
+          <p class="delivery" *ngFor="let tran of item.transactions">
+            {{ tran }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
